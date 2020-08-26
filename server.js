@@ -1,8 +1,14 @@
 const express = require('express')
+const mongoose = require('mongoose')
 //  ./ means its a relative path > inside routes folder and get artcile
 const artcileRouter = require('./routes/articles')
 //get app var
 const app = express()
+
+mongoose.connect('mongodb://localhost/blog', { 
+    useNewUrlParser: true, useUnifiedTopology: true
+ })
+
 
 //view engine
 //set view as ejs -> converts to html by engine
@@ -27,4 +33,4 @@ app.get('/', (req, res) => {
 })
 
 //start app on port 50000
-app.listen(5000)
+app.listen(5001)
