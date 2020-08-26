@@ -15,11 +15,16 @@ app.use('/articles', artcileRouter)
 app.get('/', (req, res) => {
     const articles = [{
         title: "Test Cian Article",
-        createdAt: Date.now(),
+        createdAt: new Date(),
         descripion: 'bla bla description'
+    },
+    {
+        title: "Test Cian Article 2",
+        createdAt: new Date(),
+        descripion: 'bla bla description 2'
     }]
-    res.render('index', { articles: articles})
+    res.render('index', { articles: articles })
 })
 
-//start app on port 5000
-app.listen(5001)
+//start app on port 50000
+app.listen(5000)
