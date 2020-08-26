@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
         createdAt: new Date(),
         descripion: 'bla bla description 2'
     }]
-    res.render('index', { articles: articles })
+    res.render('articles/index', { articles: articles })
 })
 
 //start app on port 50000
